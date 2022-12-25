@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    flex-wrap: wrap;
+    margin: auto;
+    border: 2px solid black;
+    box-shadow: 0 0 10px purple;
+    border-radius: 12px;
+    padding: 2em;
+    margin-top: 2em;
+}
+
+.selection_CS {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.selection_CS>select {
+    padding: .5em;
+    border-radius: 12px;
+    font-size: large;
+    margin: auto;
+    width: 70%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.pin_code {
+    padding: .5em;
+    border-radius: 12px;
+    font-size: large;
+    margin: auto;
+    width: 70%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.input_group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 1.5em;
+}
+
+.input_group>label {
+    padding: .2em;
+    margin: .4em;
+    font-weight: 600;
+}
+
+.input_group>input {
+    margin: .5em;
+    padding: .5em;
+    padding-left: .7em;
+    padding-right: .7em;
+    font-size: large;
+    border: 3px solid black;
+    border-radius: 12px;
+}
+
+.submit_button {
+    /* width: 20%; */
+    margin: auto;
+    padding: 1em;
+    background-color: white;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: larger;
+    box-shadow: 0 0 10px purple;
+    margin-top: 2em;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .submit_button {
+        width: 100%;
+    }
+}

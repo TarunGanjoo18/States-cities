@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./scripts.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <form>
+    <div class="selection_CS">
+      <select onchange="print_city('state', this.selectedIndex);" id="state_in" name ="state_o" class="form-control" required></select>
+      <select id ="state" name='city' class="form-control" required></select>
+      <input placeholder="PinCode" type="number" id="pincode" value="Enter Your PinCode" disabled name="pincode" class="pin_code">
+    </div>
+
+    <div class="input_group">
+      <label for="name">Full Name:</label>
+      <input id="name" name="name" type="text"/>
+    </div>
+
+    <div class="input_group">
+      <label for="email">Email:</label>
+      <input id="email" name="email" type="email"/>
+    </div>
+   
+    <button type="submit" class="submit_button">Submit</button>
+
+  </form>  
+
+<script language="javascript">
+
+
+print_state("state_in");
+
+function handleSubmit(event) {
+// prevents the form to get submitted by default functionality
+event.preventDefault();
+
+const data = new FormData(event.target);
+
+// const value = Object.fromEntries(data.entries());
+const value = {
+    state: data.get('state_o'),
+    city: data.get('city'),
+    name : data.get('name'),
+    pinCode : data.get('pincode'),
+    email: data.get('email'),
+}
+console.log(value);
+}
+
+const form = document.querySelector('form');
+form.addEventListener('submit', handleSubmit);
+</script>
+</body>
+</html>
